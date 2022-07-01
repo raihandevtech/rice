@@ -1,0 +1,48 @@
+._product_rice{
+    &_meta{
+        @include flex-align(center);
+    }
+    &_auth{
+        @include flex-align(center);
+        margin-right: 20px;
+        &_img{
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        &_name{
+            font-family: "Open Sans";
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.2;
+            color: $secondary1;
+        } 
+        
+    }
+    &_rating{
+        @include flex-align(center);
+        min-width: 138px;
+        &_rate{
+            font-family: "Open Sans";
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.2;
+            color: $secondary1;
+            margin-right: 5px;
+        }
+        &_star{
+            @include flex-align(center);
+            margin-top: 5px;
+            font-size: 20px;
+            color: $secondary4;
+            position: relative;
+            &_full{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}

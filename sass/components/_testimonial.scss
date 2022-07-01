@@ -1,0 +1,116 @@
+._rice_testimonial .splide__arrows{
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+._rice_testimonial .splide__arrow--prev {
+left: -110px;
+}
+._rice_testimonial .splide__arrow {
+    background: $primary1;
+    height: 3em;
+    width: 3em;
+}
+._rice_testimonial .splide__arrow svg {
+    fill: $white;
+}
+._rice_testimonial .splide__pagination {
+    display: none;
+}
+
+._testimonial_rice{
+    &_item{
+        position: relative;
+        padding: 24px 20px;
+        border-radius: 6px;
+        border: 1px solid $secondary4;
+        cursor: pointer;
+        margin: 0 10px;
+        &:hover{
+            border-color: $secondary5;
+        }
+    }
+    &_rating{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        @include flex-align(center);
+        &_star{
+            color: $secondary4;
+            font-size: 22px;
+            margin-right: 5px;
+        }
+        &_number{
+            color: $secondary1;
+            font-family: "Open Sans";
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.2;
+            margin-top: 1px;
+        }
+    }
+    &_person{
+        @include flex-align(flex-start);
+        &_img{
+            position: relative;
+            width: 80px;
+            margin-right: 10px;
+            &_main{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 50px;
+                margin-top: 2px;
+            }
+
+        }
+        &_name{
+            font-size: 16px;
+            font-family: "Open Sans";
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.2;
+            color: $secondary1;
+            margin-top: 20px;
+            margin-bottom: 6px;
+        }
+        &_profession{
+            font-size: 16px;
+            font-family: "Open Sans";
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.2;
+            color: $secondary7;
+        }
+    } 
+    &_comment{
+        margin-top: 10px;
+        font-size: 16px;
+        font-family: "Open Sans";
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.6;
+        color: $secondary1;
+    }
+}
+
+@include max-medium{
+    ._rice_testimonial{
+        .splide__arrows{
+            display: none;
+        }
+       
+        .splide__pagination {
+            display: flex;
+            bottom: -30px;
+        }
+        .splide__pagination__page {
+            background: $primary2;
+            margin: 0 4px;
+        }
+        .splide__pagination__page.is-active {
+            background: $primary1;
+        }
+    }
+}

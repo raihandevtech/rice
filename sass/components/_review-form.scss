@@ -1,0 +1,68 @@
+._review_form_rice{
+     &_section{
+         margin-bottom: 30px;
+     }
+    &_title{
+        font-family: "Open Sans";
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 1.6;
+        color: $secondary1;
+        margin-bottom: 8px;
+    }
+    &_star{
+        &_wrap{
+            @include flex-align(center);
+            margin-bottom: 15px;
+        }
+        &_main{
+            margin-right: 15px;
+        }
+        &_icon{
+            font-size: 32px;
+            cursor: pointer;
+        }
+        &_txt{
+            font-family: "Open Sans";
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.6;
+            color: $secondary1; 
+        }
+    }
+    &_content{
+        textarea{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid $secondary4;
+            border-radius: 3px;
+            min-height: 140px;
+            font-family: "Open Sans";
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.6;
+            color: $secondary1;
+            margin-bottom: 15px;
+        }
+    }
+    &_submit{
+        max-width: 140px;
+        width: 100%;
+        height: 46px;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+        background-color: $primary1;
+        @include flex(center, center);
+        font-family: "Open Sans";
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 1.6;
+        color: $white;
+        &:hover{
+            background-color: $secondary7;
+        }
+    }
+
+}

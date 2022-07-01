@@ -1,0 +1,108 @@
+._banner_rice{
+    &_section{
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+    &_main{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgb(0,212,255);
+            background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(255,205,44,0.5102415966386555) 0%, rgba(0,212,255,0.7091211484593838) 100%, rgba(4,93,182,0) 100%);
+            z-index: 2;
+        
+        }
+        &_img{
+            height: 440px;
+        }
+        &_content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            z-index: 3;
+        }
+        &_offer{
+            color: $bg9;
+            font-family: "Open Sans";
+            font-weight: 700;
+            font-size: 56px;
+            line-height: 1.2;
+            ._color{
+                color: $primary2;
+            }
+            margin-bottom: 10px;
+        }
+        &_title{
+            color: $bg2;
+            font-family: "Open Sans";
+            font-weight: 700;
+            font-size: 42px;
+            line-height: 1.2; 
+            margin-bottom: 8px;
+        }
+        &_desc{
+            color: $secondary1;
+            font-family: "Open Sans";
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.6; 
+            margin-bottom: 15px;
+            opacity: .8;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        ._share_rice_section{
+            @include flex(center, center);
+            margin-bottom: 30px;
+        }
+        ._rice_btn{
+            &_main{
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@include max-small{
+    ._banner_rice_main_content {
+        padding: 20px;
+    }
+}
+@include max-extra-small{
+    ._banner_rice_section {
+        padding-top: 80px;
+    }
+    ._banner_rice_main_offer {
+        font-size: 46px;
+    }
+    ._banner_rice_main_title {
+        font-size: 32px;
+    }
+    
+}
+@media only screen and (max-width: 375px) {
+    ._banner_rice_main_title {
+        margin-bottom: 18px;
+    }
+    ._banner_rice_main_desc {
+        display: none;
+    }
+    ._banner_rice_main ._share_rice_wrap {
+        flex-direction: column;
+    }
+    ._banner_rice_main ._share_rice_title{
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+    ._banner_rice_main ._share_rice_title::after {
+        display: none;
+    }
+}

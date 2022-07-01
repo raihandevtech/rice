@@ -1,0 +1,74 @@
+._share_rice{
+    &_wrap{
+        @include flex-align(center);
+    }
+    &_title{
+        @include flex-align(center);
+        margin-right: 30px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            height: 35px;
+            width: 2px;
+            background-color: $bg4;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -18px;
+        }
+        &_txt{
+            font-family: "Open Sans";
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1.2;
+            color: $bg4;
+            margin-right: 4px;
+
+        }
+        &_icon{
+            font-size: 18px;
+            color: $primary2;
+        }
+    }
+    &_title._primary{
+        ._share_rice_title_txt{
+            color: $primary1;
+        }
+        ._share_rice_title_icon{
+            color: $secondary7;
+        }
+        &::after{
+            background-color: $primary2;
+            height: 30px
+        }
+
+    }
+    &_social{
+        @include flex-align(center);
+        &_link{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            @include flex(center,center);
+            border: 1px solid $primary2;
+            background-color: $bg9;
+            margin: 0 5px;
+            font-size: 16px;
+            color: $secondary7;
+            &:hover{
+                color: $white;
+                background-color: $primary1;
+                border-color: $primary1;
+            }
+        }
+
+    }
+    &_social._primary{
+        ._share_rice_social_link{
+            background-color: $secondary6;
+            &:hover{
+                background-color: $primary1;
+            }
+        }
+    }
+}

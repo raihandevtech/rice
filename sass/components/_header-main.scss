@@ -1,0 +1,236 @@
+._header_rice {
+    &_main_section{
+        border-bottom: 1px solid $border2;
+        padding: 15px 0;
+        background-color: $secondary3;
+    }
+    &_wrap{
+        @include flex(center, space-between);
+    }
+    &_logo{
+        max-width: 100px;
+        width: 100%;
+        cursor: pointer;
+    }
+    &_nav{
+        @include flex-align(center);
+        &_menu{
+            &_main{
+                @include flex-align(center);
+                margin-right: 100px;
+            }
+            &_item{
+                position: relative;
+                &_link{
+                    font-family: "Open Sans";
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 1.2;
+                    color: $secondary1;
+                    margin-right: 30px;
+                    &:hover{
+                        color: $primary1;
+                    }
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 46px;
+                        left: 0;
+                        height: 3px;
+                        width: 0px;
+                        background-color: $primary1;
+                        transition: all .3s ease;
+                    }
+                    &:hover::before{
+                        width: 20px;
+                    }
+                }
+                ._active{
+                    color: $primary1;
+                    &::before{
+                        width: 20px;
+                    }
+                }
+                
+
+
+            }
+        }
+    }
+    &_dropdown{
+        position: relative;
+        ._dropdown_icon{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -18px;
+            width: 15px;     
+            margin-left: 8px; 
+
+        }
+    }
+    &_dropdown_menu{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 58px;
+        left: -30px; 
+        background-color: $bg2;
+        padding: 10px 40px 10px 30px;
+        transition: all .2s ease;
+        &_item{
+            &_link{
+                padding: 6px 0;
+                display: block;
+                font-family: "Open Sans";
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 1.2;
+                color: $secondary1;
+                &:hover{
+                    color: $primary1;
+                }
+            }
+        }
+    }
+    &_dropdown_menu._active{
+        opacity: 1;
+        visibility: visible;
+        top: 48px;
+    }
+    
+    &_sign_up_btn{
+        width: 130px;
+        &_link{
+            max-width: 130px;
+            height: 45px;
+            @include flex(center, center);
+            border-radius: 32.5px;
+            position: relative;
+            overflow: hidden;
+            background-color: $primary1;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background-color: $primary2;
+            }
+            &::before{
+            position: absolute;
+            content: "";
+            top: 50%;
+            transform: translateY(-50%);
+            left: -40px;
+            width: 0;
+            height: 20px;
+            background-color: $primary2;
+            transition: all 0.3s ease-in-out;
+            }
+            &::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            transform: translateY(-50%);
+            right: -40px;
+            width: 0;
+            height: 20px;
+            background-color: $primary2;
+            transition: all 0.3s ease-in-out;
+            }
+            &:hover::before{
+                left: 0;
+                width: 100%;
+            }
+            &:hover::after{
+                right: 0;
+                width: 100%;
+            }
+        }
+        &_txt{
+            font-family: "Open Sans";
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.2; 
+            text-transform: uppercase;
+            z-index: 999;
+            transition: all 0.5s ease;
+            color: $white; 
+        }
+        &:hover &_txt{
+            color: $primary1;
+        }
+    }
+    &_menu_toggler{
+        display: none;
+    }
+}
+
+// Responsive
+@include max-medium{
+    ._header_rice_menu_toggler{
+        display: block;
+    }
+  ._header_rice_nav{
+    opacity: 0;
+     visibility: hidden;
+     flex-direction: column;
+     position: absolute;
+     top: 118px;
+     left: -100%;
+     padding-bottom: 85px;
+     max-width: 400px;
+     width: 100%;
+     background-color: $bg1;
+     transition: all .3s ease;
+   }
+   ._header_rice_nav_menu{
+    margin-top: 64px;
+    }
+    ._header_rice_nav_menu_main{
+    display: block;
+    margin-right: 0;
+    }
+    ._header_rice_nav_menu_item{
+        margin-bottom: 30px;
+    }
+    ._header_rice_nav._active{
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+    }
+ ._header_rice_nav_menu_item_link::before {
+    top: 25px;
+}
+._header_rice_dropdown_menu {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    background-color: transparent;
+    padding: 20px 15px 10px 15px;
+    transition: unset;
+}
+._header_rice_dropdown_menu._active {
+    position: unset;
+    opacity: 1;
+    visibility: visible;
+}
+._menu_toggler_icon{
+    font-size: 26px;
+    color: $primary1;
+}
+._menu_toggler_icon._open{
+    font-size: 22px;
+}
+
+}
+
+@include max-small{
+    ._header_rice_nav {
+        top: 139px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    ._header_rice_nav {
+        top: 115px;
+    }
+}

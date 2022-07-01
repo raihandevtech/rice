@@ -1,0 +1,106 @@
+._rice_btn{
+    &_main{
+        @include flex(center, center);
+        border-radius: 32.5px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            background-color: $primary2;
+        }
+        &::before{
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        left: -40px;
+        width: 0;
+        height: 20px;
+        background-color: $primary2;
+        transition: all 0.3s ease-in-out;
+        }
+        &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        right: -40px;
+        width: 0;
+        height: 20px;
+        background-color: $primary2;
+        transition: all 0.3s ease-in-out;
+        }
+        &:hover::before{
+            left: 0;
+            width: 100%;
+        }
+        &:hover::after{
+            right: 0;
+            width: 100%;
+        }
+    }
+    &_main._btn_secondary{
+        background-color: $secondary7;
+
+        &:hover{
+            background-color: $primary2;
+        }
+    }
+    &_main._btn_primary{
+        background-color: $primary1;
+        &:hover{
+            background-color: $primary2;
+        }
+    }
+    &_main._btn_trans{
+        background-color: transparent;
+        border: 1px solid $primary2;
+        &:hover{
+            background-color: $primary2;
+        }
+    }
+    &_main._btn_medium{
+        max-width: 140px;
+        height: 45px;
+    }
+    &_main._btn_small{
+        max-width: 128px;
+        height: 34px;
+        &:hover{
+            background-color: $primary2;
+        }
+        ._rice_btn_txt{
+            font-size: 14px;
+        }
+    }
+    &_main._btn_large{
+        height: 50px;
+        max-width: 170px; 
+        ._rice_btn_txt{
+            font-size: 18px;
+        }
+    }
+    &_txt{
+        font-family: "Open Sans";
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.2; 
+        text-transform: uppercase;
+        z-index: 999;
+        transition: all 0.5s ease;
+        color: $white; 
+    }
+    &_main:hover &_txt{
+        color: $primary1;
+    }
+}
+
+@include max-extra-small{
+    ._rice_btn_main._btn_large {
+        height: 44px;
+        max-width: 150px;
+    }
+    ._rice_btn_main._btn_large ._rice_btn_txt {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,51 @@
+._offer_rice_product{
+    position: relative;
+    margin-bottom: 20px;
+    &_img{
+        height: 210px;
+        overflow: hidden;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            z-index: 1;
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(0,212,255,0.7091211484593838) 36%, rgba(4,93,182,0) 100%);
+        }
+    }
+    &_content{
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        padding: 20px;
+    }
+    &_parsent{
+        font-family: "Open Sans";
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 1.2;
+        color: $secondary7;
+        margin-bottom: 6px;
+        ._color{
+            color: $bg9;
+        }
+
+    }
+    &_title{
+        font-family: "Open Sans";
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.2;
+        color: $bg1;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+}

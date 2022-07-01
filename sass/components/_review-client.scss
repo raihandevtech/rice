@@ -1,0 +1,101 @@
+._product_review_client{
+    &_main{
+        background-color: $bg1;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    &_wrap{
+        @include flex-align(flex-start);
+    }
+    &_img{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    &_right{
+        margin-left: 14px;
+    }
+    &_info{
+        @include flex-align(center);
+        margin-bottom: 8px;
+    }
+    &_star{
+        margin-top: 4px;
+        margin-right: 25px;
+        position: relative;
+        ._star_emty{
+            font-size: 20px;
+            color: $primary2;
+        }
+        ._star_full{
+            position: absolute;
+            top: 0;
+            left: 0; 
+            font-size: 20px;
+            color: $secondary4;
+        }
+    }
+    &_name{
+        font-family: "Open Sans";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $secondary1;
+    }
+    &_comment{
+        font-family: "Open Sans";
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.6;
+        color: $secondary7;
+        margin-bottom: 10px;
+    }
+
+}
+._replay_from_store{
+    padding: 10px;
+    background-color: $bg9;
+    &_info{
+        @include flex-align(center);
+        margin-bottom: 5px;
+        &_txt{
+            font-family: "Open Sans";
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 1.6;
+            color: $secondary1;
+            margin-right: 15px;
+        }
+        &_name{
+            font-family: "Open Sans";
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.6;
+            color: $secondary1;
+        }
+
+    }
+    &_replay_txt{
+        font-family: "Open Sans";
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 1.6;
+        color: $secondary7;
+        font-style: italic;
+    }
+}
+._product_review_client_see_more_btn{
+    font-size: 16px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    line-height: 1.6;
+    color: $secondary7;
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+    &:hover{
+        color: $secondary1;
+    }
+}

@@ -1,0 +1,31 @@
+._hero_rice{
+    &_section{
+       padding: 20px 0; 
+       
+    }
+    &_wrap{
+        .container{
+          position: relative;
+          overflow: hidden;  
+        }
+    }
+    &_category_menu{
+        display: none;
+    }
+    
+
+}
+
+@include max-medium{
+    ._hero_rice_category_menu{
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: 999;
+    }
+    ._hero_rice_category_open{
+        color: $secondary7;
+        font-size: 20px;
+    }
+}

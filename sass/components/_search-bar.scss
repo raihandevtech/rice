@@ -1,0 +1,160 @@
+._all_product_rice_search_bar{
+    margin: 10px auto 30px;
+    &_wrap{
+        .row{
+            @include flex-align(center);
+        }
+        padding: 20px 30px;
+        background-color: $bg2;
+
+
+        ._category{
+           &_wrap{
+            position: relative;
+           }
+           &_select_current{
+               max-width: 200px;
+               width: 100%;
+               height: 40px;
+               background-color: $white;
+               color: $primary1;
+               @include flex-align(center);
+               padding-left: 10px;
+               position: relative;
+               font-family: "Open Sans";
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 1.2;
+               ._arrow{
+                   position: absolute;
+                   top: 50%;
+                   right: 10px;
+                   transform: translateY(-50%);
+                   font-size: 22px;
+               }
+           }
+           &_select_wrap{
+               background-color: $bg6;
+               position: absolute;
+               z-index: 10;
+               max-width: 200px;
+               width: 100%;
+               top: 120%;
+               left: 0;
+               padding: 20px 10px 20px 20px;
+               opacity: 0;
+               visibility: hidden;
+               transition: all .2s ease;
+           }
+           &_select_wrap._open{
+               opacity: 1;
+               visibility: visible;
+               top: 100%;
+           }
+           &_select_options{
+                height: 400px;
+                overflow-y: scroll;
+                &::-webkit-scrollbar {
+                    width: 8px;
+                    height: 8px;
+                }
+                
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    box-shadow: inset 0 0 5px $primary1; 
+                    border-radius: 6px;
+                }
+                
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 6px;
+                    background: rgb(2,0,36);
+                    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(243,244,242,0.9948354341736695) 0%, rgba(39,146,77,0.9920343137254902) 100%, rgba(0,212,255,1) 100%);
+                }
+                
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: rgb(2,0,36);
+                    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(210,230,193,0.9948354341736695) 0%, rgba(39,146,77,0.9920343137254902) 100%, rgba(0,212,255,1) 100%);
+                }
+           }
+           &_select_item{
+            padding: 5px 0;
+            font-family: "Open Sans";
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.2;
+            color: $secondary1;
+            cursor: pointer;
+           }
+        }
+
+        ._search_input{
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            &_main{
+                width: 100%;
+                height: 40px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                padding-left: 20px;
+                padding-right: 60px;
+                border: 1px solid $border1;
+                font-family: "Open Sans";
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 1.2;
+                color: $primary1;
+            }
+            &_btn{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                background-color: $bg8;
+                border: none;
+                height: 40px;
+                padding: 0 10px;
+                border-radius: 0 5px 5px 0;
+                border: 1px solid $border1;
+                               
+                ._icon{
+                    font-size: 22px;
+                    color: $primary1;
+                }
+            }
+
+        }
+        ._card_view{
+            text-align: right;
+            &_icon{
+                font-size: 21px;
+                color: $primary1;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+            &_icon:last-child{
+                margin-right: 0;
+            }
+        }
+
+    }
+}
+
+// Responsive
+
+@include max-extra-small{
+    ._card_view{
+        display: none;
+    }
+    ._all_product_rice_search_bar_wrap ._category_select_current {
+        margin: 0 auto;
+    }
+    ._all_product_rice_search_bar_wrap ._category_select_wrap {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

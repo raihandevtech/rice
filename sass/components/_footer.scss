@@ -1,0 +1,174 @@
+._footer_rice{
+    &_section{
+        background-color: $secondary1;
+        padding-top: 90px;
+    }
+    &_logo{
+        max-width: 110px;
+        margin-bottom: 12px;
+    }
+    &_desc{
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.6;
+        color: $secondary9;
+        max-width: 336px;
+        margin-bottom: 18px;
+    }
+    &_video{
+        max-width: 340px;
+    }
+    &_widget{
+        &_menu{
+            &_title{
+               font-family: "Open Sans";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 1.2;
+                color: $white;
+                margin-bottom: 18px; 
+            }
+            &_list{
+                list-style: none;
+                margin-bottom: 38px;
+                &_item{
+                    margin-bottom: 10px;
+                }
+                &_link{
+                    font-family: "Open Sans";
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1.4;
+                    color: $secondary9;
+                    &:hover{
+                        color: $secondary8;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    &_copy_right{
+        margin-top: 30px;
+        border-top: 1px solid var(--border3);
+        padding: 25px 0;
+        &_text{
+            font-family: "Open Sans";
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.4;
+            color: $secondary7;
+            margin-bottom: 0;
+        }
+        &_text._right{
+          text-align: right;
+        }
+        &_menu{
+            text-align: center;
+            &_link{
+                font-family: "Open Sans";
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 1.4;
+                color: $secondary7;
+                margin: 0 16px;
+                &:hover{
+                    color: $secondary8;
+                }
+            }
+        }
+    }
+
+}
+
+
+// Responsive
+  
+  /* Ipad pro */
+  @include max-medium{
+    ._footer_rice_about_widget{
+        @include flex(center,space-between);
+        margin-bottom: 30px;
+    }
+    ._footer_rice_about_widget {
+      margin-bottom: 40px;
+    }
+    ._footer_rice_copy_right_menu_link {
+      margin: 0;
+      margin-right: 10px;
+    }
+    ._footer_rice_copy_right_text._right {
+      text-align: left;
+    }
+    ._footer_rice_copy_right {
+        margin-top: 0;
+    }
+    ._footer_imaginary_copy_right_menu {
+      text-align: left;
+    }
+  }
+  @include max-small{
+    ._footer_rice_about_widget {
+        text-align: center;
+      }
+      ._footer_rice_about_content{
+        margin: 0 auto;
+      }
+      ._footer_rice_logo {
+        margin: 0 auto;
+        margin-bottom: 12px;
+      }
+      ._footer_rice_desc {
+        margin: 0 auto;
+        margin-bottom: 18px;
+      }
+      ._footer_rice_social {
+        justify-content: center;
+      }
+      ._footer_rice_social_link {
+        margin: 0 8px;
+      }
+      ._footer_rice_widget_menu {
+        text-align: center;
+      }
+      ._footer_rice_copy_right_menu {
+        padding-top: 15px;
+        text-align: center;
+      }
+      ._footer_imaginary_copy_right_menu_link {
+        display: unset;
+        margin: 10px 16px;
+      }
+      ._footer_rice_copy_right_text._right {
+        text-align: right;
+      }
+  }
+  
+  @include max-extra-small{
+    ._footer_rice_section {
+        padding-top: 60px;
+    }
+    ._footer_rice_about_widget {
+        flex-direction: column;
+    }
+      ._footer_rice_copy_right_text {
+      text-align: center;
+    }
+    ._footer_rice_copy_right_text._right {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    ._footer_rice_copy_right_menu {
+      padding-top: 0;
+    }
+    ._footer_rice_copy_right_menu_link {
+      display: block;
+      margin-top: 20px;
+    }
+  } 

@@ -1,0 +1,10 @@
+._latest_product_rice_section{
+    padding: 70px 0 70px;
+}
+
+@include max-extra-small{
+    ._latest_product_rice_section{
+        padding: 50px 0 50px;
+    }
+    
+}

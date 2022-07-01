@@ -1,0 +1,62 @@
+._related_product_rice{
+    &_item{
+        background-color: $bg7;
+        @include flex-align(flex-start);
+        position: relative;
+        margin-bottom: 20px;
+        cursor: pointer;
+        &_img{
+            min-width: 220px;
+            height: 140px;
+            position: relative;
+        }
+        
+    }
+    &_content{
+            padding: 8px;
+            &_stock{
+                font-family: "Open Sans";
+                font-weight: 600;
+                font-size: 13px;
+                line-height: 1.2;
+                color: $secondary7;
+                margin-bottom: 10px;
+            }
+            &_offer{
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 2px 8px 2px 12px;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+                background-color: $primary1;
+                font-family: "Open Sans";
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 1.6;
+                color: $white;
+            }
+            &_title{
+                font-family: "Open Sans";
+                font-weight: 600;
+                font-size: 17px;
+                line-height: 1.3;
+                color: $secondary1;
+                margin-bottom: 8px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            &_desc{
+                font-family: "Open Sans";
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 1.3;
+                color: $secondary7;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+}
